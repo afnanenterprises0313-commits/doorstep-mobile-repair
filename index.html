@@ -1,34 +1,356 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doorstep Mobile Repair</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Doorstep Mobile Repair | Aurangabad</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+}
+
+header{
+  background:#111827;
+  color:white;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:#22c55e;
+}
+
+.location{
+  font-size:12px;
+  color:#d1d5db;
+}
+
+.hero{
+  background:linear-gradient(135deg,#111827,#1e3a8a);
+  color:white;
+  padding:45px 22px;
+  text-align:center;
+}
+
+.hero .badge{
+  display:inline-block;
+  background:#22c55e;
+  color:#052e16;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:34px;
+  line-height:1.15;
+  margin-bottom:15px;
+}
+
+.hero h1 span{
+  color:#4ade80;
+}
+
+.hero p{
+  color:#dbeafe;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:14px 20px;
+  border-radius:10px;
+  font-weight:bold;
+  border:none;
+}
+
+.btn-primary{
+  background:#22c55e;
+  color:#052e16;
+}
+
+.btn-secondary{
+  background:white;
+  color:#111827;
+}
+
+.section{
+  padding:35px 18px;
+  max-width:900px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:#64748b;
+  margin-bottom:25px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.service{
+  background:white;
+  padding:20px 12px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+.service .icon{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.service h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.service p{
+  color:#64748b;
+  font-size:13px;
+}
+
+.booking{
+  background:white;
+  margin:10px 18px 35px;
+  padding:25px 18px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.booking h2{
+  margin-bottom:10px;
+}
+
+.booking p{
+  color:#64748b;
+  line-height:1.5;
+  margin-bottom:20px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.feature{
+  background:#eefdf4;
+  padding:15px;
+  border-radius:12px;
+  font-size:14px;
+}
+
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer p{
+  color:#cbd5e1;
+  margin-top:8px;
+  font-size:13px;
+}
+
+@media(min-width:700px){
+  .hero h1{
+    font-size:48px;
+  }
+
+  .services{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .features{
+    grid-template-columns:repeat(4,1fr);
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <h1>मोबाइल खराब है?</h1>
-  <h2>Technician आपके घर आएगा!</h2>
+<header>
+  <div class="logo">📱 Doorstep <span>Repair</span></div>
+  <div class="location">📍 Aurangabad</div>
+</header>
+
+<section class="hero">
+
+  <div class="badge">🏠 HOME SERVICE AVAILABLE</div>
+
+  <h1>
+    मोबाइल रिपेयर अब<br>
+    <span>आपके घर पर!</span>
+  </h1>
 
   <p>
-    Display, Battery, Charging, Camera, Speaker और
-    दूसरी मोबाइल रिपेयरिंग सेवाओं के लिए घर बैठे booking करें।
+    Display टूट गया है? Battery, Charging या कोई और Problem?
+    Technician आपके घर आएगा और आपकी सुविधा के अनुसार repair service देगा।
   </p>
 
-  <button>🔧 Repair Book करें</button>
+  <div class="buttons">
+    <a href="#booking" class="btn btn-primary">
+      🔧 Repair Book करें
+    </a>
 
-  <h2>हमारी Services</h2>
+    <a href="tel:+919999999999" class="btn btn-secondary">
+      📞 Call Now
+    </a>
+  </div>
 
-  <ul>
-    <li>📱 Display / Combo</li>
-    <li>🔋 Battery</li>
-    <li>🔌 Charging</li>
-    <li>📷 Camera</li>
-    <li>🔊 Speaker / Mic</li>
-    <li>💻 Software</li>
-  </ul>
+</section>
 
-  <h2>Chhatrapati Sambhajinagar / Aurangabad</h2>
+<section class="section">
+
+  <h2 class="section-title">हमारी Services</h2>
+
+  <p class="section-subtitle">
+    आपके मोबाइल की अलग-अलग समस्याओं के लिए repair service
+  </p>
+
+  <div class="services">
+
+    <div class="service">
+      <div class="icon">📱</div>
+      <h3>Display / Combo</h3>
+      <p>टूटा हुआ display और combo replacement</p>
+    </div>
+
+    <div class="service">
+      <div class="icon">🔋</div>
+      <h3>Battery</h3>
+      <p>Battery replacement और battery problems</p>
+    </div>
+
+    <div class="service">
+      <div class="icon">🔌</div>
+      <h3>Charging</h3>
+      <p>Charging port और charging problems</p>
+    </div>
+
+    <div class="service">
+      <div class="icon">📷</div>
+      <h3>Camera</h3>
+      <p>Front और back camera problems</p>
+    </div>
+
+    <div class="service">
+      <div class="icon">🔊</div>
+      <h3>Speaker / Mic</h3>
+      <p>Sound और microphone problems</p>
+    </div>
+
+    <div class="service">
+      <div class="icon">⚙️</div>
+      <h3>Software</h3>
+      <p>Software और system related problems</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="booking" id="booking">
+
+  <h2>🏠 घर बैठे Repair Book करें</h2>
+
+  <p>
+    अपनी mobile problem बताइए। हमारा technician
+    आपसे contact करके visit confirm करेगा।
+  </p>
+
+  <div class="buttons">
+
+    <a href="tel:+919999999999" class="btn btn-primary">
+      📞 Call करके Book करें
+    </a>
+
+    <a href="https://wa.me/919999999999" class="btn btn-secondary">
+      💬 WhatsApp करें
+    </a>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <h2 class="section-title">क्यों चुनें हमें?</h2>
+
+  <p class="section-subtitle">
+    Fast और convenient doorstep mobile repair service
+  </p>
+
+  <div class="features">
+
+    <div class="feature">🏠 Home Visit</div>
+    <div class="feature">⚡ Fast Service</div>
+    <div class="feature">🔧 Skilled Technician</div>
+    <div class="feature">📍 Local Service</div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <h3>📱 Doorstep Mobile Repair</h3>
+
+  <p>
+    Aurangabad / Chhatrapati Sambhajinagar
+  </p>
+
+  <p>
+    © 2026 Doorstep Mobile Repair. All Rights Reserved.
+  </p>
+
+</footer>
 
 </body>
 </html>
