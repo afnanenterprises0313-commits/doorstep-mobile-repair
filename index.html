@@ -1,363 +1,355 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doorstep Mobile Repair - Chhatrapati Sambhajinagar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f4f7f6;
+      color: #333;
+      padding-bottom: 50px;
+    }
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    header h1 span {
+      color: #22c55e;
+    }
+    .location-badge {
+      font-size: 13px;
+      background: #1e293b;
+      padding: 5px 10px;
+      border-radius: 20px;
+      color: #cbd5e1;
+    }
+    .hero {
+      text-align: center;
+      padding: 25px 15px 15px;
+    }
+    .hero h2 {
+      font-size: 22px;
+      margin-bottom: 6px;
+      color: #0f172a;
+    }
+    .hero p {
+      font-size: 14px;
+      color: #64748b;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+    }
+    .service-card:hover, .service-card:active {
+      border-color: #22c55e;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+    .service-icon {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+    .service-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .service-desc {
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.3;
+    }
+    .bottom-cta {
+      background: white;
+      max-width: 600px;
+      margin: 25px auto 0;
+      padding: 22px 18px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .bottom-cta h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+    .bottom-cta p {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 18px;
+    }
+    .call-btn {
+      background: #0284c7;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 10px rgba(2,132,199,0.3);
+    }
 
-<title>Doorstep Mobile Repair | Aurangabad</title>
-
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-body{
-  font-family:Arial, sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-}
-
-header{
-  background:#111827;
-  color:white;
-  padding:16px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-
-.logo{
-  font-size:20px;
-  font-weight:bold;
-}
-
-.logo span{
-  color:#22c55e;
-}
-
-.location{
-  font-size:12px;
-  color:#d1d5db;
-}
-
-.hero{
-  background:linear-gradient(135deg,#111827,#1e3a8a);
-  color:white;
-  padding:45px 22px;
-  text-align:center;
-}
-
-.hero .badge{
-  display:inline-block;
-  background:#22c55e;
-  color:#052e16;
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:13px;
-  font-weight:bold;
-  margin-bottom:18px;
-}
-
-.hero h1{
-  font-size:34px;
-  line-height:1.15;
-  margin-bottom:15px;
-}
-
-.hero h1 span{
-  color:#4ade80;
-}
-
-.hero p{
-  color:#dbeafe;
-  line-height:1.6;
-  margin-bottom:25px;
-}
-
-.buttons{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:14px 20px;
-  border-radius:10px;
-  font-weight:bold;
-  border:none;
-}
-
-.btn-primary{
-  background:#22c55e;
-  color:#052e16;
-}
-
-.btn-secondary{
-  background:white;
-  color:#111827;
-}
-
-.section{
-  padding:35px 18px;
-  max-width:900px;
-  margin:auto;
-}
-
-.section-title{
-  text-align:center;
-  font-size:25px;
-  margin-bottom:8px;
-}
-
-.section-subtitle{
-  text-align:center;
-  color:#64748b;
-  margin-bottom:25px;
-}
-
-.services{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-}
-
-.service{
-  background:white;
-  padding:20px 12px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 4px 15px rgba(0,0,0,.06);
-}
-
-.service .icon{
-  font-size:34px;
-  margin-bottom:10px;
-}
-
-.service h3{
-  font-size:16px;
-  margin-bottom:6px;
-}
-
-.service p{
-  color:#64748b;
-  font-size:13px;
-}
-
-.booking{
-  background:white;
-  margin:10px 18px 35px;
-  padding:25px 18px;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-  text-align:center;
-}
-
-.booking h2{
-  margin-bottom:10px;
-}
-
-.booking p{
-  color:#64748b;
-  line-height:1.5;
-  margin-bottom:20px;
-}
-
-.features{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.feature{
-  background:#eefdf4;
-  padding:15px;
-  border-radius:12px;
-  font-size:14px;
-}
-
-footer{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:30px 20px;
-}
-
-footer p{
-  color:#cbd5e1;
-  margin-top:8px;
-  font-size:13px;
-}
-
-@media(min-width:700px){
-  .hero h1{
-    font-size:48px;
-  }
-
-  .services{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .features{
-    grid-template-columns:repeat(4,1fr);
-  }
-}
-</style>
+    /* Modal / Popup Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      z-index: 1000;
+    }
+    .modal-card {
+      background: white;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      padding: 24px 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      position: relative;
+      animation: popup 0.25s ease-out;
+    }
+    @keyframes popup {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .close-btn {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 24px;
+      color: #94a3b8;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    .modal-card h3 {
+      font-size: 19px;
+      margin-bottom: 4px;
+      color: #0f172a;
+    }
+    .modal-card p {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 18px;
+    }
+    .form-group {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #334155;
+    }
+    .form-group select, .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+    .form-group select:focus, .form-group input:focus {
+      border-color: #22c55e;
+    }
+    .whatsapp-submit-btn {
+      width: 100%;
+      background: #22c55e;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(34,197,94,0.3);
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">📱 Doorstep <span>Repair</span></div>
-  <div class="location">📍 Aurangabad</div>
-</header>
+  <header>
+    <h1>📱 Doorstep <span>Repair</span></h1>
+    <div class="location-badge">📍 Aurangabad</div>
+  </header>
 
-<section class="hero">
-
-  <div class="badge">🏠 HOME SERVICE AVAILABLE</div>
-
-  <h1>
-    मोबाइल रिपेयर अब<br>
-    <span>आपके घर पर!</span>
-  </h1>
-
-  <p>
-    Display टूट गया है? Battery, Charging या कोई और Problem?
-    Technician आपके घर आएगा और आपकी सुविधा के अनुसार repair service देगा।
-  </p>
-
- <div style="text-align: center; margin: 25px 0;">
-  <!-- Direct Call Button -->
-  <a href="tel:+918329088889" 
-     style="background-color: #007bff; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-right: 10px; display: inline-block;">
-     📞 Direct Call करें
-  </a>
-
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/918329088889?text=नमस्ते,%20मुझे%20मोबाइल%20रिपेयरिंग%20करवानी%20है।" 
-     target="_blank" 
-     style="background-color: #25D366; color: white; padding: 12px 20px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
-     💬 WhatsApp पर बुक करें
-  </a>
-</div>
- 
-
-</section>
-
-<section class="section">
-
-  <h2 class="section-title">हमारी Services</h2>
-
-  <p class="section-subtitle">
-    आपके मोबाइल की अलग-अलग समस्याओं के लिए repair service
-  </p>
-
-  <div class="services">
-
-    <div class="service">
-      <div class="icon">📱</div>
-      <h3>Display / Combo</h3>
-      <p>टूटा हुआ display और combo replacement</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🔋</div>
-      <h3>Battery</h3>
-      <p>Battery replacement और battery problems</p>
-    </div>
-    
-<div class="service">
-  <div class="icon">⚡</div>
-  <h3>Charging</h3>
-  <p>Charging port और charging problems</p>
-</div>
-
-    <div class="service">
-      <div class="icon">📷</div>
-      <h3>Camera</h3>
-      <p>Front और back camera problems</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">🔊</div>
-      <h3>Speaker / Mic</h3>
-      <p>Sound और microphone problems</p>
-    </div>
-
-    <div class="service">
-      <div class="icon">⚙️</div>
-      <h3>Software</h3>
-      <p>Software और system related problems</p>
-    </div>
-
+  <div class="hero">
+    <h2>अपनी मोबाइल समस्या चुनें</h2>
+    <p>किसी भी सर्विस पर क्लिक करें और अपने फ़ोन का मॉडल बताएं</p>
   </div>
 
-</section>
+  <div class="services-grid">
+    <!-- 1. Display Card -->
+    <div class="service-card" onclick="openBookingModal('Display / Combo (स्क्रीन टूटना/टच प्रॉब्लम)')">
+      <div class="service-icon">📱</div>
+      <div class="service-title">Display / Combo</div>
+      <div class="service-desc">टूटा हुआ display और combo replacement</div>
+    </div>
 
-<section class="booking" id="booking">
+    <!-- 2. Battery Card -->
+    <div class="service-card" onclick="openBookingModal('Battery (बैटरी जल्दी खत्म होना/खराब होना)')">
+      <div class="service-icon">🔋</div>
+      <div class="service-title">Battery</div>
+      <div class="service-desc">Battery replacement और battery problems</div>
+    </div>
 
-  <h2>🏠 घर बैठे Repair Book करें</h2>
+    <!-- 3. Charging Card -->
+    <div class="service-card" onclick="openBookingModal('Charging Port / Jack (चार्जिंग न होना)')">
+      <div class="service-icon">⚡</div>
+      <div class="service-title">Charging</div>
+      <div class="service-desc">Charging port और jack problems</div>
+    </div>
 
-  <p>
-    अपनी mobile problem बताइए। हमारा technician
-    आपसे contact करके visit confirm करेगा।
-  </p>
+    <!-- 4. Camera Card -->
+    <div class="service-card" onclick="openBookingModal('Camera (फ्रंट या बैक कैमरा खराबी)')">
+      <div class="service-icon">📷</div>
+      <div class="service-title">Camera</div>
+      <div class="service-desc">Front और back camera problems</div>
+    </div>
 
-  <div class="buttons">
-<!-- WhatsApp Booking Button -->
-<div style="text-align: center; margin: 20px 0;">
-  <a href="https://wa.me/918329088889?text=नमस्ते,%20मुझे%20मोबाइल%20रिपेयरिंग%20के%20बारे%20में%20पूछना%20है।" 
-     target="_blank" 
-     style="background-color: #25D366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 18px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-     💬 WhatsApp पर बुक करें
-  </a>
-</div>
+    <!-- 5. Speaker / Mic Card -->
+    <div class="service-card" onclick="openBookingModal('Speaker / Mic (आवाज़ न आना या न जाना)')">
+      <div class="service-icon">🔊</div>
+      <div class="service-title">Speaker / Mic</div>
+      <div class="service-desc">Sound और microphone problems</div>
+    </div>
 
-
+    <!-- 6. Software Card -->
+    <div class="service-card" onclick="openBookingModal('Software / Hanging (सॉफ्टवेयर/हैंगिंग इशू)')">
+      <div class="service-icon">⚙️</div>
+      <div class="service-title">Software</div>
+      <div class="service-desc">Software और system related problems</div>
+    </div>
   </div>
 
-</section>
-
-<section class="section">
-
-  <h2 class="section-title">क्यों चुनें हमें?</h2>
-
-  <p class="section-subtitle">
-    Fast और convenient doorstep mobile repair service
-  </p>
-
-  <div class="features">
-
-    <div class="feature">🏠 Home Visit</div>
-    <div class="feature">⚡ Fast Service</div>
-    <div class="feature">🔧 Skilled Technician</div>
-    <div class="feature">📍 Local Service</div>
-
+  <div class="bottom-cta">
+    <h3>🏠 घर बैठे Repair Book करें</h3>
+    <p>हमारा तकनीशियन आपसे संपर्क करके विज़िट कन्फर्म करेगा।</p>
+    <a href="tel:+918329088889" class="call-btn">
+      📞 Call करके तुरंत बात करें
+    </a>
   </div>
 
-</section>
+  <!-- Popup / Modal Form -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="close-btn" onclick="closeBookingModal()">&times;</button>
+      <h3 id="modalServiceTitle">Service Booking</h3>
+      <p>मॉडल चुनें ताकि हम आपको सही रेट व जानकारी दे सकें</p>
 
-<footer>
+      <div class="form-group">
+        <label>मोबाइल ब्रांड (Brand):</label>
+        <select id="phoneBrand">
+          <option value="Vivo">Vivo</option>
+          <option value="Oppo">Oppo</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Realme">Realme</option>
+          <option value="Xiaomi / Redmi / Poco">Xiaomi / Redmi / Poco</option>
+          <option value="iPhone / Apple">iPhone / Apple</option>
+          <option value="OnePlus">OnePlus</option>
+          <option value="Motorola">Motorola</option>
+          <option value="Infinix / Tecno">Infinix / Tecno</option>
+          <option value="Other">अन्य (Other)</option>
+        </select>
+      </div>
 
-  <h3>📱 Doorstep Mobile Repair</h3>
+      <div class="form-group">
+        <label>मॉडल का नाम (Model Number/Name):</label>
+        <input type="text" id="phoneModel" placeholder="उदा. Vivo Y20, Samsung M31, iPhone 11" required>
+      </div>
 
-  <p>
-    Aurangabad / Chhatrapati Sambhajinagar
-  </p>
+      <button class="whatsapp-submit-btn" onclick="sendToWhatsApp()">
+        💬 WhatsApp पर तुरंत भेजें
+      </button>
+    </div>
+  </div>
 
-  <p>
-    © 2026 Doorstep Mobile Repair. All Rights Reserved.
-  </p>
+  <script>
+    let selectedService = '';
 
-</footer>
+    function openBookingModal(serviceName) {
+      selectedService = serviceName;
+      document.getElementById('modalServiceTitle').innerText = serviceName;
+      document.getElementById('bookingModal').style.display = 'flex';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').style.display = 'none';
+    }
+
+    // बाहर क्लिक करने पर बंद होना
+    window.onclick = function(event) {
+      let modal = document.getElementById('bookingModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function sendToWhatsApp() {
+      let brand = document.getElementById('phoneBrand').value;
+      let model = document.getElementById('phoneModel').value.trim();
+
+      if (!model) {
+        alert("कृपया अपने मोबाइल का मॉडल नाम लिखें!");
+        return;
+      }
+
+      let message = `नमस्ते! मुझे डोरस्टेप मोबाइल रिपेयर सर्विस चाहिए।%0A%0A` +
+                    `🛠️ *समस्या:* ${selectedService}%0A` +
+                    `📱 *ब्रांड:* ${brand}%0A` +
+                    `📌 *मॉडल:* ${model}%0A%0A` +
+                    `कृपया इसका खर्च (Estimate) और विज़िट का समय बताएं।`;
+
+      let whatsappURL = `https://wa.me/918329088889?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
 
 </body>
 </html>
